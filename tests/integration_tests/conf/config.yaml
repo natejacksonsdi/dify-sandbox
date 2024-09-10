@@ -8,8 +8,7 @@ worker_timeout: 30
 python_path: /usr/local/bin/python3
 python_lib_path:
   - "/usr/local/lib/python3.10"
-  - "/usr/lib/python3.10"
-  - "/usr/lib/python3"
+  - "/usr/local/lib/python3"
   - "/opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10"
   - "/opt/hostedtoolcache/Python/3.10.15/arm64/lib/python3.10"
   - "/usr/lib/x86_64-linux-gnu"
@@ -26,6 +25,6 @@ python_lib_path:
 enable_network: True # please make sure there is no network risk in your environment
 allowed_syscalls: # please leave it empty if you have no idea how seccomp works
 proxy:
-  socks5: ''
-  http: ''
-  https: ''
+  socks5: ""
+  http: ""
+  https: ""

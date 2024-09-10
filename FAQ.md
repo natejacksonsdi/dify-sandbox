@@ -15,8 +15,8 @@ If you haven't configured `python_lib_path`, `dify-sandbox` will default to the 
 ```go
 var DEFAULT_PYTHON_LIB_REQUIREMENTS = []string{
     "/usr/local/lib/python3.10", // Usually your Python installation directory; if using conda, modify this to the conda virtual environment root directory, e.g., /root/anaconda3/envs/{env_name}
-    "/usr/lib/python3.10",
-    "/usr/lib/python3",
+    "/usr/local/lib/python3.10",
+    "/usr/local/lib/python3",
     "/usr/lib/x86_64-linux-gnu/libssl.so.3", // Your Python code's shared object dependency; it will be copied to /var/sandbox/sandbox-python/usr/lib/x86_64-linux-gnu/, and your Python process will load it from /usr/lib/x86_64-linux-gnu/
     "/usr/lib/x86_64-linux-gnu/libcrypto.so.3", // Similar to above
     "/etc/ssl/certs/ca-certificates.crt",
@@ -33,8 +33,8 @@ So, when encountering such errors, you need to modify the `python_lib_path` in y
 python_path: /usr/local/bin/python3
 python_lib_path:
   - /usr/local/lib/python3.10
-  - /usr/lib/python3.10
-  - /usr/lib/python3
+  - /usr/local/lib/python3.10
+  - /usr/local/lib/python3
   - /usr/lib/x86_64-linux-gnu/libssl.so.3
   - /usr/lib/x86_64-linux-gnu/libcrypto.so.3
   - /etc/ssl/certs/ca-certificates.crt
